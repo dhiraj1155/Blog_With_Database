@@ -1,0 +1,24 @@
+<%-include("partials/header")-%>
+
+<h1 >Home</h1>
+
+<p> <%=StartingContent %></p>
+
+
+
+ <% posts.forEach(function(post){ %>
+    <h1><%= post.title %></h1> 
+    <p><%= post.content %></p>
+    
+ <% }) %>
+
+
+
+    <!-- the above for loop is written for every time when user make new post the newly added posts will be get displayed on home.ejs page
+    where forEach loop will loop through every post and written its title and the post content in home.ejs page  -->
+
+    <a href="/compose"><button class="btn btn-primary" type="submit" name="button" >Compose New</button></a>
+
+<%-include("partials/footer")-%>
+
+ 
